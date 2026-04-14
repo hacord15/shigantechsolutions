@@ -1,0 +1,269 @@
+/* components/CompaniesSection.module.css */
+
+/* Section container */
+.section {
+    background: var(--bg-soft);
+    padding: 5rem 0;
+    border-bottom: 1px solid #eef2f8;
+  }
+  
+  /* Header styles */
+  .header {
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+  
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--energy-teal-dark);
+    margin-bottom: 0.75rem;
+  }
+  
+  .title {
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Grid container */
+  .grid {
+    display: flex;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.14);
+    height: 560px;
+    background: white;
+  }
+  
+  /* Bottom strip */
+  .strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  
+  .stripWord {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #94a3b8;
+  }
+  
+  .stripDot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--energy-teal);
+  }
+  
+  /* Company Panel base styles (applied to each panel) */
+  .panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    min-width: 0;
+    /* flex value is controlled by inline style for active state */
+    transition: flex 0.65s cubic-bezier(0.77, 0, 0.18, 1);
+  }
+  
+  .panelRightBorder {
+    border-right: 1px solid #eef2f8;
+  }
+  
+  /* Video wrapper (absolute) */
+  .videoWrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  
+  /* Video iframe */
+  .videoIframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320%;
+    height: 320%;
+    transform: translate(-50%, -50%);
+    border: none;
+    pointer-events: none;
+  }
+  
+  /* Gradient overlay */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(4, 12, 24, 0.96) 0%, rgba(4, 12, 24, 0.55) 50%, rgba(4, 12, 24, 0.2) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Top accent bar */
+  .accentBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--energy-teal), var(--accent));
+    z-index: 10;
+    transform-origin: left;
+  }
+  
+  /* Top content wrapper */
+  .topContent {
+    position: relative;
+    z-index: 5;
+    padding: 30px 22px 0;
+  }
+  
+  .roman {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #cbd5e1;
+    margin-bottom: 18px;
+  }
+  
+  .iconBox {
+    width: 46px;
+    height: 46px;
+    border-radius: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef2ff;
+    color: var(--primary);
+    margin-bottom: 14px;
+    flex-shrink: 0;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .sector {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Bottom content wrapper */
+  .bottomContent {
+    position: relative;
+    z-index: 5;
+    padding: 0 22px 26px;
+    margin-top: auto;
+  }
+  
+  .tagline {
+    font-size: 0.78rem;
+    line-height: 1.75;
+    margin-bottom: 14px;
+    opacity: 0; /* will be animated by GSAP */
+  }
+  
+  .divider {
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background: #e2e8f0;
+    margin-bottom: 12px;
+    transform-origin: left;
+  }
+  
+  .companyName {
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .est {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  
+  .arrow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+/* components/CompaniesSection.module.css */
+
+/* Hero header – exactly as in the image */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    padding: 6rem 0 4rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: rgba(45, 212, 191, 0.2);
+    color: var(--energy-teal);
+    padding: 0.3rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Keep all your existing styles below (grid, panel, strip, etc.) unchanged */
+  /* ... */
